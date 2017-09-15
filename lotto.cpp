@@ -2,6 +2,9 @@
 #include "lotto.h"
 
 using namespace std;
+/* So I guess I should use arrays? Seems like quite good idea, hopefully it'll work as intended.
+ * Also I'm still not sure how to avoid duplicates...
+*/
 
 void lotto::lotek(){
     for(int i = 0; i < 6; i++) {
