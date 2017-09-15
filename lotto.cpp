@@ -7,10 +7,22 @@ using namespace std;
 */
 
 void lotto::lotek(){
-    for(int i = 0; i < 6; i++) {
-        int a = rand()%49+1;
-        cout << '\t' << a << " " << endl;
-    }
+   int lotteryPool[50];
+   for(int x = 0; x < 50; x++) {
+       lotteryPool[x] = x + 1;
+   }
+   srand (time(NULL));
+   int random;
+   int y = 0;
+   while(y < 6) {
+       random = rand()%50;
+       if(lotteryPool[random] != 0) {
+           cout << lotteryPool[random] << " ";
+           lotteryPool[random] = 0;
+           y++;
+       }
+   }
+
 }
 
 void lotto::multilotek() {
