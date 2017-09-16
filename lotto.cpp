@@ -26,10 +26,22 @@ void lotto::lotek(){
 }
 
 void lotto::multilotek() {
-    for(int i = 0; i < 20; i++) {
-        int a = rand()%80+1;
-        cout << a << endl;
-    }
+   int lotteryPool[81];
+   for(int i = 0; i < 81; i++) {
+       lotteryPool[i] = i + 1;
+   }
+   srand (time(NULL));
+   int rnd;
+   int z = 0;
+   while(z < 20) {
+       rnd = rand()%81;
+       if(lotteryPool[rnd] != 0) {
+           cout << lotteryPool[rnd] << " ";
+           lotteryPool[rnd] = 0;
+           z++;
+       }
+   }
+
 }
 
 void lotto::simpleMenu() {
